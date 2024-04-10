@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Пример веб-интерфейса на Flask</title>
+    <title>Добавление новой записи</title>
 </head>
 <body>
-    <h1>Введите что-нибудь:</h1>
+    <h1>Добавление новой записи в базу данных</h1>
     <form action="/submit" method="post">
-        <input type="text" name="user_input">
-        <button type="submit">Отправить</button>
+        <label for="username">Имя пользователя:</label><br>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <input type="submit" value="Добавить">
+    </form>
+    <h1>Просмотр всех записей в таблице</h1>
+    <form action="/view" method="post">
+        <input type="submit" value="Показать все записи">
     </form>
 </body>
 </html>
